@@ -22,3 +22,18 @@ Console.WriteLine("Result: " + res);
 // 452 -> 11
 // 82 -> 10
 // 9012 -> 12
+int CalculateSumOfDigits(int number)
+    {
+        int sum = 0;
+        while (number != 0)
+        {
+            int digit = number % 10;
+            sum += digit;
+            number /= 10;
+        }
+        return sum;
+    }
+Console.WriteLine("Input a number: ");
+int num = Convert.ToInt32(Console.ReadLine());
+int sum = CalculateSumOfDigits(num);
+Console.WriteLine("Calculate sum of digits: " + sum);
